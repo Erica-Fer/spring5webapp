@@ -34,6 +34,9 @@ public class BootStrapData implements CommandLineRunner {
         ursula.getBooks().add(earthsea);
         earthsea.getAuthors().add(ursula);
 
+        authorRepository.save(ursula);
+        bookRepository.save(twlvKing);
+
         System.out.println("Started in Bootstrap!");
         System.out.println("Number of books: " + bookRepository.count());
     }
