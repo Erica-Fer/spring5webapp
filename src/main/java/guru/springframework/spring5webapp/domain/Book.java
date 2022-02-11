@@ -33,6 +33,14 @@ public class Book {
         this.authors = authors;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public Publisher getPublisher() {
         return publisher;
     }

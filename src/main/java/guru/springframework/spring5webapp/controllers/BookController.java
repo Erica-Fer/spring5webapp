@@ -7,14 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class BookController {
-    BookRepository bookRepository;
+
+    private final BookRepository bookRepository;
 
     public BookController(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
 
     @RequestMapping("/books")
-    public String getBook(Model model){
+    public String getBooks(Model model){
 
         model.addAttribute("books", bookRepository.findAll());
         return "books/list";
